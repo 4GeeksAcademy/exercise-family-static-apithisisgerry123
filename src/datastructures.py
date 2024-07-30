@@ -33,13 +33,6 @@ class FamilyStructure:
             return {"done": True}
         return {"error": "Member not found"}
 
-    def update_member(self, id, member_data):
-        for member in self._members:
-            if member["id"] == id:
-                member.update(member_data)
-                return member
-        return None
-
     def get_member(self, id):
         for member in self._members:
             if member["id"] == id:
